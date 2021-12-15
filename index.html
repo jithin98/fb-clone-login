@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>facebook</title>
+    <link rel="stylesheet" href="fb.css" type="text/css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <a class="logo-text" href="index.html">facebook</a>
+            </div>
+
+            <div class="login">
+                <form action="">
+                    <table class="login-controls">
+                        <tr>
+                            <td><label class="login-label1">Email or phone</label></td>
+                            <td><label class="login-label2">password</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="email-label">
+                            </td>
+                            <td><input type="text" class="password-label">
+                            </td>
+                            <td><input class="sub-button" type="submit" value="login">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><a class="forgotten" href="forgotten.html">forgotten account?</a></td>
+
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <div class="main-body">
+            <div class="left-selection">
+                <p class="para">
+                    facebook help us connect and share with the <br> people in your life
+
+                </p>
+
+                <img src="facebook-connections.jpg" class="image" alt="picture">
+            </div>
+            <div class="right-selection">
+                <h2 style="margin-block-end: 0ex;">Create an account</h2>
+                <p style="margin-block-start: 0.8ex;">Its free and always will be</p>
+                <form action="" id="signup-form">
+                    <input name="fname" class="first-name" type="text" placeholder="First name" required>
+                    <input name="sname" class="surname" type="text" placeholder="Surname" required><br>
+                    <input  name="email" class="Moble-number" type="text" placeholder="Mobile number or email address" required><br>
+                    <input name="password" class="newpassword" type="text" placeholder="New password" required><br>
+                    <p class="birthday">Birthday</p>
+
+                    <select name="day" >
+                        <option value="">Day</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="">4</option>
+                        <option value="">5</option>
+                        <option value="">6</option>
+                        <option value="">7</option>
+                        <option value="">8</option>
+                        <option value="">9</option>
+                        <option value="">10</option>
+
+
+
+                    </select>
+                    <select name="" id="month">
+                        <option value="">month</option>
+                        <option value="">jan</option>
+                        <option value="">feb</option>
+                        <option value="">march</option>
+                        <option value="">april</option>
+                        <option value="">may</option>
+                        <option value="">june</option>
+                        <option value="">july</option>
+
+
+                    </select>
+
+                    </select>
+                    <select name="" id="year">
+                        <option value="">year</option>
+                        <option value="">1990</option>
+                        <option value="">1991</option>
+                        <option value="">1995</option>
+                        <option value="">1996</option>
+
+                    </select>
+
+                    <br>
+                    <br>
+                    <input type="radio"  name="gender" value="male">
+                    <label class="gender">male</label>
+                    <input type="radio"  name="gender" value="female">
+                    <label  class="gender">female</label><br>
+                    <br>
+                    <input type="submit" value="Sign up" class="finalsubmit">
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+
+<script>
+$(document).ready(function(){
+    $("#signup-form").validate({
+       
+    // name anu use cheyunath not id in valiadation plugin
+
+       rules:{
+        fname:{
+           required:true,
+           minlength:4,
+           maxlength:6
+        },
+        sname:{
+           required:true,
+           minlength:4
+        },
+        email:{
+           required:true,
+          email:true
+        },
+        password:{
+           required:true,
+         minlength:6
+        },
+        day:{
+           required:true,
+   
+        },
+         gender:{
+           required:true,
+   
+        }
+       },
+
+    //    custom meassage provide chayan
+        messages:{
+            // fname:"noki type cheyada mone" (global ayi kodukan)
+
+            fname:{
+                required:"enter first name",
+            minlength:"4 letter vennam"
+            }
+          
+        }
+    })
+})
+</script>
+
+</body>
+
+</html>
